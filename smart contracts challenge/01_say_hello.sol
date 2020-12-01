@@ -4,7 +4,7 @@ contract say_hello {
     string private greeting;
     address private owner;
 
-    constructor(string _firstGreeting) {
+    constructor(string _firstGreeting) public {
         greeting = _firstGreeting;
         owner = msg.sender;
     }

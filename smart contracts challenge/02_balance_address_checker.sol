@@ -3,7 +3,7 @@ pragma solidity >= 0.4.21 < 0.6.0;
 contract balance_address_checker {
     address private createrAddress;
 
-    constructor() {
+    constructor() public {
         createrAddress = msg.sender;
     }
 

@@ -3,8 +3,9 @@ pragma solidity >= 0.4.21 < 0.6.0;
 contract lottery_no_limit {
     address private creater;
     address[] private participants;
+    uint randNonce = 0;
 
-    constructor() {
+    constructor() public {
         creater = msg.sender;
     }
 
@@ -13,7 +14,7 @@ contract lottery_no_limit {
         participants.push(msg.sender);
     }
 
-    function selectWinner() private returns (address) {
+    function selectWinner() public {
         require(msg.sender == creater);
         require(participants.length > 0);
         address winner = participants[randomNumber()];
