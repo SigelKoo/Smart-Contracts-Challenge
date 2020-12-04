@@ -8,7 +8,7 @@ contract lottery_10_users {
     function join() public payable {
         require(msg.value == 0.1 ether);
         require(participantsCount < 10);
-        require(joinedAlready(msg.sender));
+        require(joinedAlready(msg.sender) == false);
         participants[participantsCount] = msg.sender;
         participantsCount += 1;
         if(participantsCount == 10) {
