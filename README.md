@@ -26,6 +26,8 @@
 第10个用户进入后，选择获胜者  
 赢家收走所有的钱  
 选出获胜者之后，开始下一轮  
+  
+记错误一次 require(joinedAlready(msg.sender)) 应为 require(joinedAlready(msg.sender) == false);
 
 ## 05_lottery_no_limit
 用户支付0.1以太即可加入lottery  
