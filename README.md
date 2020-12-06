@@ -27,7 +27,7 @@
 赢家收走所有的钱  
 选出获胜者之后，开始下一轮  
   
-记错误一次 require(joinedAlready(msg.sender)) 应为 require(joinedAlready(msg.sender) == false);
+错误：require(joinedAlready(msg.sender)) 应为 require(joinedAlready(msg.sender) == false);
 
 ## 05_lottery_no_limit
 用户支付0.1以太即可加入lottery  
@@ -44,3 +44,12 @@
 合约所有者决定何时生成随机数(1-100)  
 选择生成数字的用户获胜  
 所有奖励将分配给所有赢家  
+
+## 07_fundraising
+有筹款目标的（创立时设定数额）  
+筹资有时间限制（创立时设定时间）  
+任何人都可以增加任何金额，直到时间结束或目标达到为止  
+时间到了，但目标尚未完成，用户可以撤回他们的资金  
+当目标达到时，所有者可以取出所有钱  
+
+需要为require写上错误提示，否则报错不知道是什么
